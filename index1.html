@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication table</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    
+    <script>
+        var para = document.getElementById('table')
+        var c=0;
+        console.log(para)
+        for(let i = 2; i <= 12; i++)
+        {
+            for(let a = 0; a <= 12; a++)
+            {
+               var b = i * a;
+               console.log(i+ "X" + a + "=" + b)
+               console.log("\n")
+         //     para.innerHTML = b;
+         
+         c += b + "<br>" ; 
+            }
+        }
+       
+    </script>
+</body>
+</html>
