@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion devises</title>
+    <style>
+        body
+        {
+         
+            margin: auto;
+            display: flex;
+        }
+           .cont
+        {
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+                   
+        }
+        .cont1
+        {
+            margin-top: 150px;
+            border-radius: 6px;
+            border: 2.5px solid rgb(8, 101, 201);  
+            padding: 15px;   
+        }
+        h1
+        {
+            color: rgb(9, 112, 221);
+        }
+        #conversion
+        {
+            font-size: 2em;
+            padding: 10px;
+            text-align: center;
+            color: rgb(49, 49, 49);
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="cont1">
+            <h1>Make your currency conversions on this platform</h1>
+
+    <p id="conversion"></p>
+        </div>
+    
+    </div>
+</body>
+<script>
+    const element = prompt( 'Quelles devise voulez vous échanger?     "USD , EUR , FCFA , naira , cedi"')
+    const element1 = prompt('En quoi voulez vous échanger la devise?  "USD , EUR , FCFA , naira , cedi"')
+    const montant = prompt("Entrez le parseFloat(montant) à convertir. Exemple: 100 ")
+    
+    convert = document.getElementById('conversion')
+    let result;
+    if(element === 'usd' && element1 === 'eur')
+    {
+        result = parseFloat(parseFloat(montant)) * 0.82;
+    }
+    else if( element === 'eur' && element1 === 'usd')
+    {
+        result = parseFloat(montant) *1.21;
+    }
+    else if(element === 'fcfa' && element1 === 'eur')
+    {
+        result = parseFloat(montant) / 656.57;
+    }
+    else if(element === 'eur' && element1 === 'fcfa')
+    {
+        result = parseFloat(montant) * 656.57;
+    }
+    else if(element === 'fcfa' && element1 === 'usd')
+    {
+        result = parseFloat(montant) / 542;
+    }
+    else if(element === 'usd' && element1 === 'fcfa')
+    {
+        result = parseFloat(montant) * 542;
+    }
+    
+    else if(element === 'naira' && element1 === 'usd')
+    {
+        result = parseFloat(montant) * 0.0026;
+    }
+    else if(element === 'usd' && element1 === 'naira')
+    {
+        result = parseFloat(montant) / 0.0026;
+    }
+    else if(element === 'naira' && element1 === 'eur')
+    {
+        result = parseFloat(montant) * 0.0022;
+    }
+    else if(element === 'eur' && element1 === 'naira')
+    {
+        result = parseFloat(montant) / 0.0022;
+    }
+    else if(element === 'naira' && element1 === 'fcfa')
+    {
+        result = parseFloat(montant) * 1.42;
+    }
+    else if(element === 'fcfa' && element1 === 'naira')
+    {
+        result = parseFloat(montant) / 1.42;
+    }
+    else if(element === 'naira' && element1 === 'cedi')
+    {
+        result = parseFloat(montant) * 0.015;
+    }
+    else if(element === 'cedi' && element1 === 'usd')
+    {
+        result = parseFloat(montant) * 0.17;
+    }
+    else if(element === 'usd' && element1 === 'cedi')
+    {
+        result = parseFloat(montant) / 0.17;
+    }else if(element === 'eur' && element1 === 'cedi')
+    {
+        result = parseFloat(montant) * 0.14;
+    }
+    else if(element === 'cedi' && element1 === 'eur')
+    {
+        result = parseFloat(montant) * 0.14;
+    }
+    else if(element === 'fcfa' && element1 === 'cedi')
+    {
+        result = parseFloat(montant) / 91.83;
+    }
+    else if(element === 'cedi' && element1 === 'fcfa')
+    {
+        result = parseFloat(montant) * 91.83;
+    }
+    
+    convert.innerHTML = montant + ' ' + element + ' ='  + `<strong> `+ result + `</strong>` + ' ' + element1;
+      </script>  
+</html>
